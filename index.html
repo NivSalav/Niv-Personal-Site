@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Niv Salav | בדיקות תוכנה | אתר אישי</title>
+  <meta name="description" content="שלום! אני ניב סלאב, בודק תוכנה בתחילת הדרך עם רצון להצליח. בואו להכיר אותי דרך האתר האישי שלי.">
+  <meta name="keywords" content="ניב סלב, בדיקות תוכנה, QA, אתר אישי, ניב, בודק תוכנה">
+  <meta name="author" content="Niv Salav">
+  <meta name="language" content="he">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Page 1 -->
+  <section class="hero">
+<nav class="menu">
+  <a href="#קצת עליי">About Me</a>
+  <a href="#if you got">Gallery&Portfolio</a>
+<a href="javascript:void(0);" id="contact-link">Contact</a>
+</nav>
+
+    </nav>
+	
+<div id="contact-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" id="close-modal">&times;</span>
+    <h2>Contact Me</h2>
+    <p>
+      <strong>Phone:</strong> <a href="tel:050-2236693">050-2236693</a>
+    </p>
+    <p>
+      <strong>Email:</strong> 
+      <a="nivsalav@gmail.com">nivsalav@gmail.com</a>
+    </p>
+    <p>
+      <strong>LinkedIn:</strong> 
+      <a href="https://www.linkedin.com/in/niv-salav" target="_blank">Click here</a>
+    </p>
+  </div>
+</div>
+
+    <div class="intro">
+<div class="intro">
+  <div class="intro-box">
+    <h1>:) Niv Salav – Your Next QA Tester</h1>
+    <p class="motivational">
+      <span id="typing-text"></span><span class="cursor">|</span>
+    </p>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/niv-salav" target="_blank">LinkedIn</a>
+      <a href="#if you got">Gallery&Portfolio</a>
+    </div>
+  </div>
+</div>
+<div class="scroll-down">
+  <span>&#x2193;</span> <!-- זה החץ למטה -->
+</div>
+
+  </section>
+
+
+  <!-- Page 2 -->
+  <section class="about" id="קצת עליי">
+  <div class="content">
+    <!-- צד שמאל – תמונה -->
+    <div class="left-side">
+      <img src="images/me.jpg" alt="Your Photo" class="profile-pic">
+      <div class="quote-under-image">
+        <p><strong>Work hard in silence.<br>Let your success make the noise.</strong></p>
+      </div>
+    </div>
+
+<div class="text" id="about-text" dir="rtl">
+<div class="text" id="about-text" dir="rtl" lang="he">
+  <div class="lang-toggle">
+    <button id="toggle-lang">English</button>
+  </div>
+
+  <h2 id="about-title">קצת עליי</h2>
+  <p class="headline" id="about-headline">אני בן 31, נשוי באושר ואבא לשני ילדים מתוקים.</p>
+  <p class="details" id="about-details">
+    כיום אני עובד כמנהל משאבי אנוש וחשב שכר. <br>
+    החלטתי לעשות הסבת מקצוע לתחום בדיקות התוכנה, כי עולם המחשבים תמיד סקרן אותי והדליק לי את הניצוץ בעיניים. <br>
+    יש לי רצון עז להצליח ולתת מעצמי למקום העבודה. <br>
+    אני לא מכיר את המושג "לחץ" – כשיש הרבה משימות, אני רק נהיה ממוקד יותר. <br>
+    לסיכום? אני האיש למשימות מיוחדות.
+  </p>    <!-- צד ימין – טקסט + כפתורים -->
+    <div class="text">
+      <h2>החוזקות והתחביבים שלי</h2>
+
+      <div id="qa-section" class="strengths">
+        <h3>החוזקות שלי כבודק תוכנה</h3>
+        <ul>
+          <li>שימת לב לפרטים הקטנים.</li>
+          <li>חשיבה פתרונית וממוקדת מטרה.</li>
+          <li>יחסיי אנוש מעולים.</li>
+        </ul>
+      </div>
+
+      <div class="buttons">
+        <button id="btn-strengths">חוזקות</button>
+        <button id="btn-hobbies">תחביבים</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Place your JavaScript code here -->
+<script>
+  // Get modal, open button, and close button
+  const modal = document.getElementById('contact-modal');
+  const contactLink = document.getElementById('contact-link');
+  const closeModal = document.getElementById('close-modal');
+
+  // Open modal when clicking the Contact link
+  contactLink.addEventListener('click', () => {
+    modal.style.display = 'flex';
+  });
+
+  // Close modal when clicking the close button
+  closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  // Close modal when clicking outside the modal content
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+</script>
+
+<script>
+  const messages = [
+    'בודק תוכנה בבית הלבן: בדוק שלחיצה על הכפתור האדום מכניסה דיאט קולה לחדר', 
+    'כל משימה היא אפשרית – השאלה היא מי מבצע אותה',
+    'בודק תוכנה – כי מישהו צריך לוודא שהכפתור באמת עושה משהו.'
+  ];
+
+  const typingText = document.getElementById('typing-text');
+  let messageIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const currentMessage = messages[messageIndex];
+    const displayedText = currentMessage.substring(0, charIndex);
+
+    typingText.textContent = displayedText;
+
+    if (!isDeleting && charIndex < currentMessage.length) {
+      charIndex++;
+      setTimeout(type, 50); // typing speed
+    } else if (isDeleting && charIndex > 0) {
+      charIndex--;
+      setTimeout(type, 30); // deleting speed
+    } else {
+      // Wait and switch message
+      isDeleting = !isDeleting;
+      if (!isDeleting) {
+        messageIndex = (messageIndex + 1) % messages.length;
+      }
+      setTimeout(type, 1500); // pause between messages
+    }
+  }
+
+  type();
+</script>
+<script>
+  const strengths = [
+    "שימת לב לפרטים הקטנים.",
+    "חשיבה פתרונית וממוקדת מטרה.",
+    "יחסיי אנוש מעולים."
+  ];
+
+  const hobbies = [
+    "לשחק בPS5.",
+    "צפייה בכדורגל.",
+    "ספורט (בעיקר קרוספיט)."
+  ];
+
+  const qaSection = document.getElementById("qa-section");
+  const btnStrengths = document.getElementById("btn-strengths");
+  const btnHobbies = document.getElementById("btn-hobbies");
+
+  btnStrengths.addEventListener("click", () => {
+    updateQASection("החוזקות שלי כבודק תוכנה", strengths);
+  });
+
+  btnHobbies.addEventListener("click", () => {
+    updateQASection("התחביבים שלי", hobbies);
+  });
+
+  function updateQASection(title, items) {
+    qaSection.innerHTML = `
+      <h3>${title}</h3>
+      <ul>
+        ${items.map(item => `<li>${item}</li>`).join("")}
+      </ul>
+    `;
+  }
+</script>
+
+  
+</script>
+
+
+  <!-- Page 3 -->
+  
+<!-- Page 3: Gallery & Portfolio -->
+<section class="Gallery-Portfolio" id="if you got">
+  <h2>אם הגעת עד כאן קודם כל תודה רבה! מקווה לשמוע ממך בקרוב</h2>
+  
+<!-- First row of images -->
+<div class="gallery-row">
+<div class="project-box">
+  <a href="files/Niv Salav&Maor Ongo Nespresso STR.pdf" target="_blank" class="download-link">📄 לצפייה בפרויקט</a>
+    <img src="images/a.jpg" alt="Project Screenshot">
+  </div>
+<div class="project-box">
+  <a href="" target="_blank" class="download-link">📄 לצפייה בפרויקט</a>
+  <img src="images/journey2.jpg" alt="">
+  </div>
+<div class="project-box">
+  <a href="" target="_blank" class="download-link">📄 לצפייה בפרויקט</a>
+  <img src="images/journey3.png" alt="">
+  </div>
+</div>
+
+</section>
+
+<!-- Place your JavaScript code here -->
+
+</script>
+
+<script>
+  const aboutContainer = document.getElementById('about-text');
+  const aboutTitle = document.getElementById('about-title');
+  const aboutHeadline = document.getElementById('about-headline');
+  const aboutDetails = document.getElementById('about-details');
+  const toggleBtn = document.getElementById('toggle-lang');
+
+  let isHebrew = true;
+
+  toggleBtn.addEventListener('click', () => {
+    if (isHebrew) {
+      // מעבר לאנגלית
+      aboutContainer.setAttribute('dir', 'ltr');
+      aboutContainer.setAttribute('lang', 'en');
+      aboutTitle.style.textAlign = 'left';
+      aboutHeadline.style.textAlign = 'left';
+      aboutDetails.style.textAlign = 'left';
+
+      aboutTitle.textContent = "About Me";
+      aboutHeadline.textContent = "I'm 31 years old, happily married and a proud dad of two sweet kids.";
+      aboutDetails.innerHTML = `
+        I'm currently working as a payroll accountant and HR manager.<br>
+        I chose to transition into QA because the world of computers has always fascinated me and sparked something inside me.<br>
+        I'm highly motivated to succeed and give my all to the workplace.<br>
+        I don't know what "pressure" means – when the tasks pile up, I become even more focused.<br>
+        In short? I'm your guy for special missions.
+      `;
+      toggleBtn.textContent = "עברית";
+    } else {
+      // חזרה לעברית
+      aboutContainer.setAttribute('dir', 'rtl');
+      aboutContainer.setAttribute('lang', 'he');
+      aboutTitle.style.textAlign = 'right';
+      aboutHeadline.style.textAlign = 'right';
+      aboutDetails.style.textAlign = 'right';
+
+      aboutTitle.textContent = "קצת עליי";
+      aboutHeadline.textContent = "אני בן 31, נשוי באושר ואבא לשני ילדים מתוקים.";
+      aboutDetails.innerHTML = `
+        כיום אני עובד כמנהל משאבי אנוש וחשב שכר. <br>
+        החלטתי לעשות הסבת מקצוע לתחום בדיקות התוכנה, כי עולם המחשבים תמיד סקרן אותי והדליק לי את הניצוץ בעיניים. <br>
+        יש לי רצון עז להצליח ולתת מעצמי למקום העבודה. <br>
+        אני לא מכיר את המושג "לחץ" – כשיש הרבה משימות, אני רק נהיה ממוקד יותר. <br>
+        לסיכום? אני האיש למשימות מיוחדות.
+      `;
+      toggleBtn.textContent = "English";
+    }
+
+    isHebrew = !isHebrew;
+  });
+</script>
+
+
+</body>
+</html>
+
