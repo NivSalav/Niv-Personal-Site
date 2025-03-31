@@ -166,6 +166,11 @@ html, body {
   white-space: normal;
   max-width: 100%;
   padding: 0 10px;
+  min-height: 3.5em; /* ⬅️ מוסיף גובה קבוע שמתאים לשתי שורות */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 /* אנימציית הקלדה */
