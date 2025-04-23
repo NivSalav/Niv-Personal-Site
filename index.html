@@ -44,11 +44,12 @@
 
 <div class="intro">
   <h1 dir="ltr" style="text-align: center;">
-    Niv Salav – QA Tester 😊
+    Niv Salav – QA Engineer 😊
   </h1>
-  <p class="motivational">
-    <span id="typing-text"></span><span class="cursor">|</span>
-  </p>
+<p class="motivational">
+  בודק תוכנה – כי מישהו צריך לוודא שהכפתור באמת עושה משהו. 😉
+</p>
+
   <div class="links">
     <a href="https://www.linkedin.com/in/niv-salav" target="_blank">LinkedIn</a>
     <a href="#if you got">Portfolio</a>
@@ -80,13 +81,13 @@
   </div>
 
   <h2 id="about-title">קצת עליי</h2>
-  <p class="headline" id="about-headline">אני בן 31, נשוי באושר ואבא לשני ילדים מתוקים.</p>
+  <p class="headline" id="about-headline">אני בן 31, נשוי ואבא לשניים</p>
   <p class="details" id="about-details">
-    כיום אני עובד כמנהל משאבי אנוש וחשב שכר. <br>
-    החלטתי לעשות הסבת מקצוע לתחום בדיקות התוכנה, כי עולם המחשבים תמיד סקרן אותי והדליק לי את הניצוץ בעיניים. <br>
-    יש לי רצון עז להצליח ולתת מעצמי למקום העבודה. <br>
-    אני לא מכיר את המושג "לחץ" – כשיש הרבה משימות, אני רק נהיה ממוקד יותר. <br>
-    לסיכום? אני האיש למשימות מיוחדות.
+    כיום אני עובד כחשב שכר ומנהל משאבי אנוש <br>
+	אך החלטתי לעשות הסבת מקצוע לתחום בדיקות התוכנה, משום שעולם המחשבים עניין וסקרן אותי מאז שאני זוכר את עצמי - עוד מגיל 6 😉. <br>
+    אני מביא איתי מוטיבציה גבוהה ורצון להוציא מוצרים באיכות מירבית. <br>
+    מחשבים מלווים אותי כל חיי: בילדות ובנעורים במשחקים, ובהמשך בעבודה. <br>
+	אני משתדל תמיד להעניק ערך מוסך ולספר שקט ונחת במקום העבודה.
   </p>    <!-- צד ימין – טקסט + כפתורים -->
     <div class="text">
       <h2>החוזקות והתחביבים שלי</h2>
@@ -95,7 +96,7 @@
         <h3>החוזקות שלי כבודק תוכנה</h3>
         <ul>
           <li>שימת לב לפרטים הקטנים.</li>
-          <li>חשיבה פתרונית וממוקדת מטרה.</li>
+          <li>חשיבה לוגית.</li>
           <li>יחסיי אנוש מעולים.</li>
         </ul>
       </div>
@@ -133,47 +134,10 @@
     }
   });
 </script>
-
-<script>
-  const messages = [
-    'בודק תוכנה בבית הלבן: בדוק שלחיצה על הכפתור האדום מכניסה דיאט קולה לחדר', 
-    'כל משימה היא אפשרית – השאלה היא מי מבצע אותה',
-    'בודק תוכנה – כי מישהו צריך לוודא שהכפתור באמת עושה משהו.'
-  ];
-
-  const typingText = document.getElementById('typing-text');
-  let messageIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-
-  function type() {
-    const currentMessage = messages[messageIndex];
-    const displayedText = currentMessage.substring(0, charIndex);
-
-    typingText.textContent = displayedText;
-
-    if (!isDeleting && charIndex < currentMessage.length) {
-      charIndex++;
-      setTimeout(type, 50); // typing speed
-    } else if (isDeleting && charIndex > 0) {
-      charIndex--;
-      setTimeout(type, 30); // deleting speed
-    } else {
-      // Wait and switch message
-      isDeleting = !isDeleting;
-      if (!isDeleting) {
-        messageIndex = (messageIndex + 1) % messages.length;
-      }
-      setTimeout(type, 1500); // pause between messages
-    }
-  }
-
-  type();
-</script>
 <script>
   const strengths = [
     "שימת לב לפרטים הקטנים.",
-    "חשיבה פתרונית וממוקדת מטרה.",
+    "חשיבה לוגית.",
     "יחסיי אנוש מעולים."
   ];
 
@@ -195,16 +159,21 @@
     updateQASection("התחביבים שלי", hobbies);
   });
 
-  function updateQASection(title, items) {
+function updateQASection(title, items) {
+    const isEnglish = aboutContainer.getAttribute('lang') === 'en';
+    const dir   = isEnglish ? 'ltr' : 'rtl';
+    const align = isEnglish ? 'left' : 'right';
+
+    const listItems = items
+      .map(item => `<li style="direction:${dir};text-align:${align};">${item}</li>`)
+      .join("");
+
     qaSection.innerHTML = `
-      <h3>${title}</h3>
-      <ul>
-        ${items.map(item => `<li>${item}</li>`).join("")}
-      </ul>
+      <h3 style="text-align:${align};">${title}</h3>
+      <ul dir="${dir}" style="text-align:${align};">${listItems}</ul>
     `;
   }
 </script>
-
   
 </script>
 
@@ -256,13 +225,13 @@
       aboutDetails.style.textAlign = 'left';
 
       aboutTitle.textContent = "About Me";
-      aboutHeadline.textContent = "I'm 31 years old, happily married and a proud dad of two sweet kids.";
+      aboutHeadline.textContent = ".I'm 31 years old, happily married and a proud dad of two sweet kids";
       aboutDetails.innerHTML = `
-        I'm currently working as a payroll accountant and HR manager.<br>
-        I chose to transition into QA because the world of computers has always fascinated me and sparked something inside me.<br>
-        I'm highly motivated to succeed and give my all to the workplace.<br>
-        I don't know what "pressure" means – when the tasks pile up, I become even more focused.<br>
-        In short? I'm your guy for special missions.
+        .I currently work as a payroll accountant and HR manager<br>
+        But I decided to change careers to the field of software testing, because the world of computers has interested and intrigued me for as long as I can remember - since the age of 6 😉<br>
+        .I bring with me high motivation and a desire to produce products of the highest quality<br>
+        Computers have accompanied me my entire life: in childhood and adolescence, in games, and later in work <br>
+        .I always try to provide value and create peace and quiet in the workplace
       `;
       toggleBtn.textContent = "עברית";
     } else {
@@ -276,12 +245,12 @@
       aboutTitle.textContent = "קצת עליי";
       aboutHeadline.textContent = "אני בן 31, נשוי באושר ואבא לשני ילדים מתוקים.";
       aboutDetails.innerHTML = `
-        כיום אני עובד כמנהל משאבי אנוש וחשב שכר. <br>
-        החלטתי לעשות הסבת מקצוע לתחום בדיקות התוכנה, כי עולם המחשבים תמיד סקרן אותי והדליק לי את הניצוץ בעיניים. <br>
-        יש לי רצון עז להצליח ולתת מעצמי למקום העבודה. <br>
-        אני לא מכיר את המושג "לחץ" – כשיש הרבה משימות, אני רק נהיה ממוקד יותר. <br>
-        לסיכום? אני האיש למשימות מיוחדות.
-      `;
+    כיום אני עובד כחשב שכר ומנהל משאבי אנוש <br>
+	אך החלטתי לעשות הסבת מקצוע לתחום בדיקות התוכנה, משום שעולם המחשבים עניין וסקרן אותי מאז שאני זוכר את עצמי - עוד מגיל 6 😉. <br>
+    אני מביא איתי מוטיבציה גבוהה ורצון להוציא מוצרים באיכות מירבית. <br>
+    מחשבים מלווים אותי כל חיי: בילדות ובנעורים במשחקים, ובהמשך בעבודה. <br>
+	אני משתדל תמיד להעניק ערך מוסך ולספר שקט ונחת במקום העבודה.
+	`;
       toggleBtn.textContent = "English";
     }
 

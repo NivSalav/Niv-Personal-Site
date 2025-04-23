@@ -13,6 +13,14 @@ html, body {
   color: #333;
 }
 
+/* פותר את הנקודה בצד הלא‑נכון בפסקה באנגלית */
+#about-details[dir="ltr"],
+#about-headline[dir="ltr"] {
+  unicode-bidi: plaintext;
+  direction: ltr;
+  text-align: left;
+}
+
 .quote-under-image {
   text-align: center;
   direction: ltr;
